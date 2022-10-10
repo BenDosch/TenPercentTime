@@ -28,6 +28,47 @@
     "action": "Reaction", "range_type": "Ranged", "range": "10",
     "target": "One creature", "attack": "Strength vs Fortitude",
     "attackSpecial": "If your sexy, Charisma vs Fortitude"
+  },
+  {
+    "name": "Channel Divinity: Divine Fortune", "description": "In the face of peril, you hold true to your faith and receive a special boon.",
+    "frequency": "Encounter", "origin": "Cleric", "category": "Feature",
+    "keywords": ["Divine"],
+    "action": "Free Action", "range_type": "Personal",
+    "details": [{"name": "Effect", "text": "You gain a +1 bonus to your next attack roll or saving throw before the end of your next turn."}]
+  },
+  {
+    "name": "Channel Divinity: Turn Undead", "description": "You sear undead foes, push them back, and root them in place.",
+    "frequency": "Encounter", "origin": "Cleric", "category": "Feature",
+    "keywords": ["Divine", "Implement", "Radiant"],
+    "action": "Standard Action", "range_type": "Close", "range": "burst 2 (5 at 11th level, 8 at 21st level)",
+    "target": "Each undead creature in burst", "attack": "Wisdom vs Will",
+    "details": [
+      {"name": "Hit", "text": "1d10 + Wisdom modifier radiant damage, and you push the target a number of squares equal to 3 + your Charisma modifier. The target is immobilized until the end of your next turn."},
+      {"text": "Increase damage to 2d10 + Wisdom modifier at 5th level, 3d10 + Wisdom modifier at 11th level, 4d10 + Wisdom modifier at 15th level, 5d10 + Wisdom modifier at 21st"},
+      {"name": "Miss", "text": "Half damage, and the target is not pushed or immobilized."}
+    ]
+  },
+  {
+    "name": "Healing Word", "description": "You whisper a brief prayer as divine light washes over your target, helping to mend its wounds.",
+    "frequency": "Encounter", "frequencySpecial": "You can use this power twice per encounter, but only once per round. At 16th level, you can use this power three times per encounter.",
+    "origin": "Cleric", "category": "Feature", "keywords": ["Divine", "Healing"],
+    "action": "Minor Action", "range_type": "Close", "range": "burst 5 (10 at 11th level, 15 at 21st level)",
+    "target": "You or one ally",
+    "details": [
+      {"name": "Effect", "text": "The target can spend a healing surge and regain an additional 1d6 hit points."},
+      {"text": "Increase the amount of additional hit points regained to 2d6 at 6th level, 3d6 at 11th level, 4d6 at 16th level, 5d6 at 21st level, and 6d6 at 26th level."}
+    ]
+  },
+  {
+    "name": "Lance of Faith", "description": "A brilliant ray of light sears your foe with golden radiance. Sparkles of light linger around the target, guiding your ally’s attack.",
+    "frequency": "At-Will",  "keywords": ["Divine", "Implement", "Radiant"],
+    "origin": "Cleric", "category": "Feature",
+    "action": "Standard Action", "range_type": "Ranged", "range": "5",
+    "attack": "Wisdom vs Reflex", "target": "One creature",
+    "details": [
+      {"name": "Hit", "text": "1d8 + Wisdom modifier radiant damage, and one ally you can see gains a +2 power bonus to his or her next attack roll against the target."},
+      {"text": "Increase damage to 2d8 + Wisdom modifier at 21st level."}
+    ]
   }
   ]
 }
