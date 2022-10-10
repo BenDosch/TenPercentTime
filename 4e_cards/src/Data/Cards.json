@@ -1,0 +1,33 @@
+{
+    "Cards": [{
+    "name": "Card1", "description": "Flavor text!",
+    "frequency": "At-Will", "origin": "Warlock",
+    "category": "Attack", "level": "1", "keywords": ["Arcane", "Fire"],
+    "action": "Standard Action", "rangeType": "Close",
+    "actionSpecial": "Extra actions are awesome!",
+    "range": "burst 5 (10 at 11th level, 15 at 21st level)",
+    "target": "You or one ally", "attack": "Wisdom vs Reflex"
+  },
+  {
+    "name": "Card2", "description": "Is so fun.",
+    "frequency": "Encounter", "origin": "Racial", "frequencySpecial": "Cool stuff",
+    "category": "Power", "level": "", "keywords": ["Arcane", "Fire", "Teleport"],
+    "action": "Minor Action", "range_type": "Area", "range": "blast 10",
+    "target": "Each enemy in blast", "attack": "Intelligence vs AC"
+  },
+  {
+    "name": "Card3", "description": "Makes things go BOOM!",
+    "frequency": "Daily", "origin": "Warlock", "category": "Feature",
+    "level": "", "keywords": ["Arcane"], "action": "Free Action",
+    "range_type": "Melee" , "range": "weapon", "target": "One creature",
+    "targetSpecial": "If you've been good, one extra", "attack": "Charisma vs Will"
+  },
+  {
+    "name": "Card4", "description": "",
+    "origin": "", "category": "", "level": "", "keywords": ["Martial"],
+    "action": "Reaction", "range_type": "Ranged", "range": "10",
+    "target": "One creature", "attack": "Strength vs Fortitude",
+    "attackSpecial": "If your sexy, Charisma vs Fortitude"
+  }
+  ]
+}

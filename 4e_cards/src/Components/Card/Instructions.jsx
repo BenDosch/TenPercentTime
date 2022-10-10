@@ -19,42 +19,47 @@ const CardInfo = styled.span`
 
 class Instructions extends Component{
   render () {
+    const {
+      frequency, keywords, frequencySpecial, action, range_type,
+      actionSpecial, target, targetSpecial, attack, attackSpecial
+    } = this.props
+
     return (
       <Grid>
         <Row>
-          <BoldSpan>{this.props.frequency} &#9670; {this.props.keywords}</BoldSpan>
+          <BoldSpan>{frequency} &#9670; {keywords.join(", ")}</BoldSpan>
         </Row>
-        {this.props.frequencySpecial && (
+        {frequencySpecial && (
           <Row>
-            <CardInfo><b>Special:</b> {this.props.frequencySpecial}</CardInfo>
+            <CardInfo><b>Special:</b> {frequencySpecial}</CardInfo>
           </Row>
         )}
         <Row>
-          <BoldSpan>{this.props.action}</BoldSpan><CardInfo><b>{this.props.range_type}</b> {this.props.range}</CardInfo>
+          <BoldSpan>{action}</BoldSpan><CardInfo><b>{range_type}</b> {range_type}</CardInfo>
         </Row>
-        {this.props.actionSpecial && (
+        {actionSpecial && (
           <Row>
-            <CardInfo><b>Special:</b> {this.props.actionSpecial}</CardInfo>
+            <CardInfo><b>Special:</b> {actionSpecial}</CardInfo>
           </Row>
         )}
-        {this.props.target && (
+        {target && (
           <Row>
-            <CardInfo><b>Target:</b> {this.props.target}</CardInfo>
+            <CardInfo><b>Target:</b> {target}</CardInfo>
           </Row>
         )}
-        {this.props.targetSpecial && (
+        {targetSpecial && (
           <Row>
-            <CardInfo><b>Special:</b> {this.props.targetSpecial}</CardInfo>
+            <CardInfo><b>Special:</b> {targetSpecial}</CardInfo>
           </Row>
         )}
-        {this.props.attack && (
+        {attack && (
           <Row>
-            <CardInfo><b>Attack:</b> {this.props.attack}</CardInfo>
+            <CardInfo><b>Attack:</b> {attack}</CardInfo>
           </Row>
         )}
-        {this.props.attackSpecial && (
+        {attackSpecial && (
           <Row>
-            <CardInfo><b>Special:</b> {this.props.attackSpecial}</CardInfo>
+            <CardInfo><b>Special:</b> {attackSpecial}</CardInfo>
           </Row>
         )}
       </Grid>

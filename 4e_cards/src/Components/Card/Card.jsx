@@ -79,7 +79,7 @@ class Card extends Component {
       level, frequencySpecial, keywords, 
       action, actionSpecial, range_type, range,
       target, targetSpecial, attack, attackSpecial,
-    } = this.props.card;
+    } = this.props;
 
     return (
       <FlipCard onClick={this.flipCard.bind(this)}>
@@ -103,7 +103,8 @@ class Card extends Component {
             frequency={frequency} origin={origin}
             category={category} level={level}
           />
-          <h1>Recharging</h1>
+          {frequency!=="Encounter" && frequency!=="Daily"  ? (<h1>Recharging?</h1>) :
+          (<h1>Recharges after a {frequency==="Encounter" ? 'short' : ''}{frequency==="Daily" ? 'long' : ''} rest</h1>)}
         </CardBack>
       </FlipCard>
     );
