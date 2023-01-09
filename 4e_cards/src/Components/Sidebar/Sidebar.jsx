@@ -1,18 +1,25 @@
 import React from 'react';
-import { slide as Menu } from 'react-burger-menu';
+import Menu from "./MenuComponent";
+import MenuItem from './MenuItemComponent';
+import { CreateDeckButton, DeleteDeckButton, EditDeckButton } from '../Buttons/Deck';
 import './Sidebar.css';
-
+import styled from "styled-components";
 
 
 const Sidebar = props => {
+
   return (
     <Menu>
-      <a className="menu-item" href="/decks">
-        Decks
-      </a>
-      <a className="menu-item" href="/cards">
-        Cards
-      </a>
+      <MenuItem title="Decks">
+        {props.Decks.map(deck => <MenuItem key={deck} title={deck} onClick={() => {props.setActiveDeck(deck)}}/>)}
+        <CreateDeckButton />
+        <EditDeckButton />
+        <DeleteDeckButton />
+      </MenuItem>
+      <MenuItem title="Cards">
+        {props.Cards.map(card => <MenuItem key={card} title={card}/>)}
+      </MenuItem>
+      
     </Menu>
   );
 };

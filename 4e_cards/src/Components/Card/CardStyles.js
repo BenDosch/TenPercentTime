@@ -1,17 +1,13 @@
 import styled, { css } from "styled-components";
 
-const CardColorDark = "#dcdbcc";
+const CardColorDark = "#d2d0ba";
 const AtWillGreen = "#609868";
 const EncounterRed = "#951733";
 const DailyGray = "#4b4c4d";
+const ItemYellow = "#d8941c";
 
 const Grid = styled.div`
 
-`;
-
-const Row = styled.div`
-  display: flex;
-  padding-left: 0.5em;
 `;
 
 const BoldSpan = styled.span`
@@ -37,6 +33,7 @@ const FlipCard = styled.article`
   cursor: pointer;
   perspective: 1000px;
   transition: 1s;
+  overflow-y: scroll;
 
   &:focus,
   &:hover {
@@ -88,7 +85,7 @@ const Detail = styled.div`
   padding-left: 0.5em;
 
   :nth-child(odd) {
-    background-color: ${CardColorDark};
+    background-image: linear-gradient(to right, ${CardColorDark} , white);
   }
 `;
 
@@ -101,7 +98,7 @@ const CardHeader = styled.div`
     props.frequency === "At-Will" ? AtWillGreen
     : props.frequency === "Encounter" ? EncounterRed
     : props.frequency === "Daily" ? DailyGray
-    : AtWillGreen
+    : ItemYellow
   };
   display: flex;
   flex-direction: row;
@@ -134,10 +131,17 @@ const CardDescription = styled.div`
   color: black;
   text-align: left;
   padding-left: 0.5em;
-  background-color: ${CardColorDark};
+  background-image: linear-gradient(to right, ${CardColorDark} , white);
+`;
+
+const Row = styled.div`
+  display: flex;
+  padding-left: 0.5em;
 `;
 
 export {
+  AtWillGreen,
+  BoldSpan,
   CardBack,
   CardColorDark,
   CardDescription,
@@ -146,12 +150,10 @@ export {
   CardName,
   CardOrigin,
   CardSide,
-  Detail,
-  FlipCard,
-  AtWillGreen,
-  EncounterRed,
   DailyGray,
+  Detail,
+  EncounterRed,
+  FlipCard,
   Grid,
   Row,
-  BoldSpan,
 };

@@ -1,34 +1,5 @@
 {
-    "Cards": [{
-    "name": "Card1", "description": "Flavor text!",
-    "frequency": "At-Will", "origin": "Warlock",
-    "category": "Attack", "level": "1", "keywords": ["Arcane", "Fire"],
-    "action": "Standard Action", "rangeType": "Close",
-    "actionSpecial": "Extra actions are awesome!",
-    "range": "burst 5 (10 at 11th level, 15 at 21st level)",
-    "target": "You or one ally", "attack": "Wisdom vs Reflex"
-  },
-  {
-    "name": "Card2", "description": "Is so fun.",
-    "frequency": "Encounter", "origin": "Racial", "frequencySpecial": "Cool stuff",
-    "category": "Power", "level": "", "keywords": ["Arcane", "Fire", "Teleport"],
-    "action": "Minor Action", "range_type": "Area", "range": "blast 10",
-    "target": "Each enemy in blast", "attack": "Intelligence vs AC"
-  },
-  {
-    "name": "Card3", "description": "Makes things go BOOM!",
-    "frequency": "Daily", "origin": "Warlock", "category": "Feature",
-    "level": "", "keywords": ["Arcane"], "action": "Free Action",
-    "range_type": "Melee" , "range": "weapon", "target": "One creature",
-    "targetSpecial": "If you've been good, one extra", "attack": "Charisma vs Will"
-  },
-  {
-    "name": "Card4", "description": "",
-    "origin": "", "category": "", "level": "", "keywords": ["Martial"],
-    "action": "Reaction", "range_type": "Ranged", "range": "10",
-    "target": "One creature", "attack": "Strength vs Fortitude",
-    "attackSpecial": "If your sexy, Charisma vs Fortitude"
-  },
+    "Cards": [
   {
     "name": "Channel Divinity: Divine Fortune", "description": "In the face of peril, you hold true to your faith and receive a special boon.",
     "frequency": "Encounter", "origin": "Cleric", "category": "Feature",
@@ -62,12 +33,179 @@
   {
     "name": "Lance of Faith", "description": "A brilliant ray of light sears your foe with golden radiance. Sparkles of light linger around the target, guiding your ally’s attack.",
     "frequency": "At-Will",  "keywords": ["Divine", "Implement", "Radiant"],
-    "origin": "Cleric", "category": "Feature",
+    "origin": "Cleric", "category": "Attack", "level": "1",
     "action": "Standard Action", "range_type": "Ranged", "range": "5",
     "attack": "Wisdom vs Reflex", "target": "One creature",
     "details": [
       {"name": "Hit", "text": "1d8 + Wisdom modifier radiant damage, and one ally you can see gains a +2 power bonus to his or her next attack roll against the target."},
       {"text": "Increase damage to 2d8 + Wisdom modifier at 21st level."}
+    ]
+  },
+  {
+    "name": "Priest’s Shield", "description": "You smite your foe with your weapon and brand it with a ghostly, glowing symbol of your deity’s anger. By naming one of your allies when the symbol appears, you add divine power to that ally’s attacks against the branded foe.",
+    "frequency": "At-Will",  "keywords": ["Divine", "Weapon"],
+    "origin": "Cleric", "category": "Attack", "level": "1",
+    "action": "Standard Action", "range_type": "Melee", "range": "weapon",
+    "attack": "Strength vs AC", "target": "One creature",
+    "details": [
+      {"name": "Hit", "text": "1[W] + Strength modifier damage, and you and one adjacent ally gain a +1 power bonus to AC until the end of your next turn."},
+      {"text": "Increase damage to 2[W] + Strength modifier at 21st level."}
+    ]
+  },
+  {
+    "name": "Righteous Brand", "description": "You utter a minor defensive prayer as you attack with your weapon.",
+    "frequency": "At-Will",  "keywords": ["Divine", "Weapon"],
+    "origin": "Cleric", "category": "Attack", "level": "1",
+    "action": "Standard Action", "range_type": "Melee", "range": "weapon",
+    "attack": "Strength vs AC", "target": "One creature",
+    "details": [
+      {"name": "Hit", "text": "1[W] + Strength modifier damage, and one ally within 5 squares of you gains a power bonus to melee attack rolls against the target equal to your Strength modifier until the end of your next turn."},
+      {"text": "Increase damage to 2[W] + Strength modifier at 21st level."}
+    ]
+  },
+  {
+    "name": "Sacred Flame Sacred Flame", "description": "Sacred light shines from above, searing a single enemy with its radiance while at the same time aiding an ally with its beneficent power.",
+    "frequency": "At-Will",  "keywords": ["Divine", "Implement", "Radiant"],
+    "origin": "Cleric", "category": "Attack", "level": "1",
+    "action": "Standard Action", "range_type": "Ranged", "range": "5",
+    "attack": "Wisdom vs Reflex", "target": "One creature",
+    "details": [
+      {"name": "Hit", "text": "1d6 + Wisdom modifier radiant damage, and one ally you can see chooses either to gain temporary hit points equal to your Charisma modifier + one-half your level or to make a saving throw."},
+      {"text": "Increase damage to 2d6 + Wisdom modifier at 21st level."}
+    ]
+  },
+  {
+    "name": "Cause Fear", "description": "Your holy symbol ignites with the fury of your god. Uncontrollable terror grips your enemy, causing him to instantly recoil.",
+    "frequency": "Encounter",  "keywords": ["Divine", "Fear", "Implement"],
+    "origin": "Cleric", "category": "Attack", "level": "1",
+    "action": "Standard Action", "range_type": "Ranged", "range": "10",
+    "attack": "Wisdom vs Will", "target": "One creature",
+    "details": [
+      {"name": "Hit", "text": "The target moves its speed + your Charisma modifier away from you. The fleeing target avoids unsafe squares and difficult terrain if it can. This movement provokes opportunity attacks."}
+    ]
+  },
+  {
+    "name": "Divine Glow", "description": "Murmuring a prayer to your deity, you invoke a blast of white radiance from your holy symbol. Foes burn in its stern light, but your allies are heartened and guided by it.",
+    "frequency": "Encounter",  "keywords": ["Divine", "Implement", "Radiant"],
+    "origin": "Cleric", "category": "Attack", "level": "1",
+    "action": "Standard Action", "range_type": "Close", "range": "blast 3",
+    "attack": "Wisdom vs Reflex", "target": "Each enemy in blast",
+    "details": [
+      {"name": "Hit", "text": "1d8 + Wisdom modifier radiant damage."},
+      {"name": "Effect", "text": "Allies in the blast gain a +2 power bonus to attack rolls until the end of your next turn."}
+    ]
+  },
+  {
+    "name": "Healing Strike", "description": "Divine radiance gleams from your weapon. When you smite your enemy, your deity bestows a minor blessing in the form of healing for you or one of your allies.",
+    "frequency": "Encounter",  "keywords": ["Divine", "Healing", "Radiant", "Weapon"],
+    "origin": "Cleric", "category": "Attack", "level": "1",
+    "action": "Standard Action", "range_type": "Melee", "range": "weapon",
+    "attack": "Strength vs AC", "target": "One creature",
+    "details": [
+      {"name": "Hit", "text": "2[W] + Strength modifier radiant damage, and the target is marked until the end of your next turn. In addition, you or one ally within 5 squares of you can spend a healing surge."}
+    ]
+  },
+  {
+    "name": "Wrathful Thunder", "description": "Your arm is made strong by the power of your deity. When you strike, a terrible thunderclap smites your adversary and dazes him.",
+    "frequency": "Encounter",  "keywords": ["Divine", "Thunder", "Weapon"],
+    "origin": "Cleric", "category": "Attack", "level": "1",
+    "action": "Standard Action", "range_type": "Melee", "range": "weapon",
+    "attack": "Strength vs AC", "target": "One creature",
+    "details": [
+      {"name": "Hit", "text": "1[W] + Strength modifier thunder damage, and the target is dazed until the end of your next turn."}
+    ]
+  },
+  {
+    "name": "Avenging Flame", "description": "You slam your weapon into your foe, who bursts into flame. Divine fire avenges each attack your enemy dares to make.",
+    "frequency": "Daily",  "keywords": ["Divine", "Fire", "Weapon"],
+    "origin": "Cleric", "category": "Attack", "level": "1",
+    "action": "Standard Action", "range_type": "Melee", "range": "weapon",
+    "attack": "Strength vs AC", "target": "One creature",
+    "details": [
+      {"name": "Hit", "text": "2[W] + Strength modifier damage, and ongoing 5 fire damage (save ends)."},
+      {"name": "Miss", "text": "Half damage, and no ongoing fire damage."},
+      {"name": "Special", "text": "If the target attacks on its turn, it can’t attempt a saving throw against the ongoing damage."}
+    ]
+  },
+  {
+    "name": "Beacon of Hope", "description": "A burst of divine energy harms your foes and heals your allies. The radiant energy lingers around your holy symbol and improves your healing powers for the rest of the battle.",
+    "frequency": "Daily",  "keywords": ["Divine", "Healing", "Implement"],
+    "origin": "Cleric", "category": "Attack", "level": "1",
+    "action": "Standard Action", "range_type": "Close", "range": "burst 3",
+    "attack": "Wisdom vs Will", "target": "Each enemy in burst",
+    "details": [
+      {"name": "Hit", "text": "The target is weakened until the end of its next turn."},
+      {"name": "Special", "text": "You and all your allies in the burst regain 5 hit points, and your healing powers restore +5 hit points until the end of the encounter."}
+    ]
+  },
+  {
+    "name": "Cascade of Light", "description": "A burst of divine radiance sears your foe.",
+    "frequency": "Daily",  "keywords": ["Divine", "Implement", "Radiant"],
+    "origin": "Cleric", "category": "Attack", "level": "1",
+    "action": "Standard Action", "range_type": "Ranged", "range": "10",
+    "attack": "Wisdom vs Will", "target": "One creature",
+    "details": [
+      {"name": "Hit", "text": "3d8 + Wisdom modifier radiant damage, and the target gains vulnerability 5 to all your attacks (save ends)."},
+      {"name": "Special", "text": "Half damage, and the target gains no vulnerability."}
+    ]
+  },
+  {
+    "name": "Guardian of Faith", "description": "You conjure a ghostly guardian, indistinct except for a glowing shield emblazoned with your deity’s symbol. A burst of radiance erupts from it to sear foes that move next to it.",
+    "frequency": "Daily",  "keywords": ["Conjuration", "Divine", "Implement", "Radiant"],
+    "origin": "Cleric", "category": "Attack", "level": "1",
+    "action": "Standard Action", "range_type": "Ranged", "range": "5",
+    "details": [
+      {"name": "Hit", "text": "You conjure a guardian that occupies 1 square within range. Every round, you can move the guardian 3 squares as a move action. The guardian lasts until the end of the encounter. Any creature that ends its turn next to the conjured guardian is subject to a Wisdom vs. Fortitude attack. On a hit, the attack deals 1d8 + Wisdom modifier radiant damage."}
+    ]
+  },
+  {
+    "name": "Bless", "description": "You utter a simple prayer and gain the power to instantly heal wounds, and your touch momentarily suffuses you or a wounded creature with a dim silver light.",
+    "frequency": "Daily",  "keywords": ["Divine"],
+    "origin": "Cleric", "category": "Utility", "level": "2",
+    "action": "Standard Action", "range_type": "Close", "range": "burst 20",
+    "target": "You and each ally in burst",
+    "details": [
+      {"name": "Effect", "text": "Until the end of the encounter, all targets gain a +1 power bonus to attack rolls."}
+    ]
+  },
+  {
+    "name": "Cure Light Wounds", "description": "You utter a simple prayer and gain the power to instantly heal wounds, and your touch momentarily suffuses you or a wounded creature with a dim silver light.",
+    "frequency": "Daily",  "keywords": ["Divine", "Healing"],
+    "origin": "Cleric", "category": "Utility", "level": "2",
+    "action": "Standard Action", "range_type": "Melee", "range": "touch",
+    "target": "You or one creature",
+    "details": [
+      {"name": "Effect", "text": "The target regains hit points as if it had spent a healing surge."}
+    ]
+  },
+  {
+    "name": "Divine Aid", "description": "You beseech your deity to grant you or one of your allies the strength to overcome a hindrance.",
+    "frequency": "Encounter",  "keywords": ["Divine"],
+    "origin": "Cleric", "category": "Utility", "level": "2",
+    "action": "Standard Action", "range_type": "Ranged", "range": "5",
+    "target": "You or one ally",
+    "details": [
+      {"name": "Effect", "text": "The target makes a saving throw with a bonus equal to your Charisma modifier."}
+    ]
+  },
+  {
+    "name": "Sanctuary", "description": "You cast a protective ward upon a creature that makes enemies’s attacks less effective.",
+    "frequency": "Encounter",  "keywords": ["Divine"],
+    "origin": "Cleric", "category": "Utility", "level": "2",
+    "action": "Standard Action", "range_type": "Ranged", "range": "10",
+    "target": "You or one creature",
+    "details": [
+      {"name": "Effect", "text": "The target receives a +5 bonus to all defenses. The effect lasts until the target attacks or until the end of your next turn."}
+    ]
+  },
+  {
+    "name": "Shield of Faith", "description": "A gleaming shield of divine energy appears over you, granting you and nearby allies protection against attacks.",
+    "frequency": "Daily",  "keywords": ["Divine"],
+    "origin": "Cleric", "category": "Utility", "level": "2",
+    "action": "Standard Action", "range_type": "Close", "range": "burst 5",
+    "target": "You and each ally in burst",
+    "details": [
+      {"name": "Effect", "text": "The targets gain a +2 power bonus to AC until the end of the encounter."}
     ]
   }
   ]

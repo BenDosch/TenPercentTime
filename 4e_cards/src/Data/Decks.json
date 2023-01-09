@@ -1,8 +1,19 @@
 {
-    "All Cards":["Card1","Card2","Card3","Card4"],
-    "At-Will Deck":["Card1","Card4"],
+    "All Cards":[
+        "Channel Divinity: Divine Fortune", "Channel Divinity: Turn Undead", "Healing Word",
+        "Lance of Faith", "Priest’s Shield", "Righteous Brand", "Sacred Flame Sacred Flame",
+        "Cause Fear", "Divine Glow", "Healing Strike", "Wrathful Thunder", "Avenging Flame",
+        "Beacon of Hope", "Cascade of Light", "Guardian of Faith", "Bless", "Cure Light Wounds",
+        "Divine Aid", "Sanctuary", "Shield of Faith"
+],
+    "At-Will Deck":[
+        "Lance of Faith", "Priest’s Shield", "Righteous Brand", "Sacred Flame Sacred Flame"
+    ],
     "Cleric": [
         "Channel Divinity: Divine Fortune", "Channel Divinity: Turn Undead", "Healing Word",
-        "Lance of Faith"
+        "Lance of Faith", "Priest’s Shield", "Righteous Brand", "Sacred Flame Sacred Flame",
+        "Cause Fear", "Divine Glow", "Healing Strike", "Wrathful Thunder", "Avenging Flame",
+        "Beacon of Hope", "Cascade of Light", "Guardian of Faith", "Bless", "Cure Light Wounds",
+        "Divine Aid", "Sanctuary", "Shield of Faith"
     ]
 }

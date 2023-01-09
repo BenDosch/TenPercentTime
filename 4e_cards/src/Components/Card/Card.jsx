@@ -16,14 +16,14 @@ class Card extends Component {
 
   render() {
     const {
-      name, description, frequency, origin,category,
+      name, description, frequency, origin, category,
       level, frequencySpecial, keywords, 
       action, actionSpecial, range_type, range,
-      target, targetSpecial, attack, attackSpecial, details
+      target, targetSpecial, attack, attackSpecial, details,
     } = this.props;
 
     return (
-      <FlipCard onClick={this.flipCard.bind(this)}>
+      <FlipCard onClick={this.flipCard.bind(this)} id={name}>
         <CardFront>
           <Title
             name={name} description={description} 
